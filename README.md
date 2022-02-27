@@ -1,7 +1,7 @@
 # Cardano-Sign-Language-Translator
 
 ## Description:
-Cardano is a program which recognizes hand gestures from a camera source. The main use of Cardano is the conversion of American Sign Language(ASL) to any other spoken language.
+***Cardano*** is a program which recognizes hand gestures from a camera source. The main use of Cardano is the conversion of American Sign Language(ASL) to any other spoken language.
 
 **Cardano offers real time translation with Roaming capabilities:**
 - No excess equipment
@@ -10,7 +10,10 @@ Cardano is a program which recognizes hand gestures from a camera source. The ma
 
 ## Technology:
 By combining the Pytorch Deep Learning module and [OpenCV](https://docs.opencv.org/4.5.5/) a image processing library to create a deep neural network model for pose recognition.
-Translation to mutliple languages done using the [Google Translation API](https://cloud.google.com/translate/). Hosted on the Streamlit framework.
+
+Translation to mutliple languages done using the [Google Translation API](https://cloud.google.com/translate/). 
+
+Hosted on the Streamlit framework.
 ## Context:
 - To help the deaf or mute
 - Translate sign language
@@ -27,10 +30,7 @@ Sign Language [MNIST](https://www.kaggle.com/datamunge/sign-language-mnist). Eac
 
 
 ## Contributors:
-
-Ayon Chakroborty
-
-Luka Cvetko
-
-Patana Phongphila
+- Ayon Chakroborty
+- Luka Cvetko
+- Patana Phongphila
 
