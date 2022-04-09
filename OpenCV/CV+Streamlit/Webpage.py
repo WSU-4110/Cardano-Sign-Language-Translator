@@ -1,6 +1,5 @@
 import streamlit as st
 import cv2
-from mtranslate import translate #pip install mtranslate
 import pandas as pd
 import os
 import numpy as np
@@ -34,56 +33,67 @@ def get_suggestion(prev_word='my', next_semi_word='na'):
     return [word[0] for word in suggestions]
 
 
-model = torch.load('iteration1.pt')
-model.eval()
+def translation():
+    #integrate Google Cloud API
+    trans = google_translator() 
 
-current_frame = 0
-prev_frame = 0
+    # pip install openpyxl
+    df = pd.read_excel(os.path.join('language.xlsx'), sheet_name='wiki')
+    df.dropna(inplace=True)
+    lang = df['name'].to_list()
+    langlist=tuple(lang)
+    langcode = df['iso'].to_list()
 
-full_sentence = ''
-text_suggestion = ''
+    lang_array = {lang[i]: langcode[i] for i in range(len(langcode))}
+    text = st.text_input('Sign Language Translation')
+    #option = st.sidebar.radio('SELECT LANGUAGE', langlist)
 
-signs = {'0': 'A', '1': 'B', '2': 'C', '3': 'D', '4': 'E', '5': 'F', '6': 'G', '7': 'H', '8': 'I',
+    language = st.sidebar.selectbox('', ['en', 'pl', 'de', 'hr'])
+
+    if st.button('Translate'):    
+            result = trans.translate(text, lang_tgt= language)
+            st.write(result)
+            speech = gTTS(text = result, lang = language, slow = False)
+            speech.save('user_trans.mp3')          
+            audio_file = open('user_trans.mp3', 'rb')    
+            audio_bytes = audio_file.read()    
+            st.audio(audio_bytes, format='audio/ogg',start_time=0)
+
+def model_load():
+    model = torch.load('iteration1.pt')
+    model.eval()
+    
+    signs = {'0': 'A', '1': 'B', '2': 'C', '3': 'D', '4': 'E', '5': 'F', '6': 'G', '7': 'H', '8': 'I',
             '10': 'K', '11': 'L', '12': 'M', '13': 'N', '14': 'O', '15': 'P', '16': 'Q', '17': 'R',
             '18': 'S', '19': 'T', '20': 'U', '21': 'V', '22': 'W', '23': 'X', '24': 'Y' }
 
-autocomplete.load() #text suggestion in future
+    autocomplete.load() #text suggestion in future
 
 
-# Create a network object
-net = cv2.dnn.readNetFromCaffe('deploy.prototxt', 'res10_300x300_ssd_iter_140000.caffemodel')
+    # Create a network object
+    net = cv2.dnn.readNetFromCaffe('deploy.prototxt', 'res10_300x300_ssd_iter_140000.caffemodel')
 
-# Model parameters used to train model.
-mean = [104, 117, 123]
-scale = 1.0
-in_width = 300
-in_height = 300
+    # Model parameters used to train face detection model.
+    mean = [104, 117, 123]
+    scale = 1.0
+    in_width = 300
+    in_height = 300
 
-# Set the detection threshold for face detections.
-detection_threshold = 0.8
+    # Set the detection threshold for face detections.
+    detection_threshold = 0.8
 
-# Annotation settings.
-font = cv2.FONT_HERSHEY_SIMPLEX
-font_scale = 0.5
-font_thickness = 1
-
-
+    # Annotation settings.
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    font_scale = 0.5
+    font_thickness = 1
     
-# --- Header section -- #
-st.set_page_config(layout="wide")
-st.title("Hi, Welcome to Cardano!")
-# setup camera on streamlit
-st.subheader("Camera Feed")
-run = st.checkbox('Run')
-FRAME_WINDOW = st.image([])
+def detection(has_frame, frame):
+    current_frame = 0
+    prev_frame = 0
 
-camera = cv2.VideoCapture(0)
-camera.set(3, 700)
-camera.set(4, 480)
-
-while run:
-    has_frame, frame = camera.read()  
-        
+    full_sentence = ''
+    text_suggestion = ''
+    
     h = frame.shape[0]
     w = frame.shape[1]
     # Flip THE video frame horizontally (not required, just for convenience)
@@ -95,16 +105,15 @@ while run:
 
     FPS = int(FPS)
     FPS = str(FPS) #convert to string for display
-
-
-    # Convert the image into a blob
+    
+     # Convert the image into a blob
     blob = cv2.dnn.blobFromImage(frame, scalefactor=scale, size=(in_width, in_height), mean=mean, swapRB=False, crop=False)
     # Pass the blob to the DNN model.
     net.setInput(blob)
     # Retrieve detections from the DNN model.
     detections = net.forward()
-
-    # Process each detection.
+    
+     # Process each detection.
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2]
         if confidence > detection_threshold:
@@ -115,7 +124,7 @@ while run:
             b1 = y1 - 30
             a2 = x2 - 250
             b2 = y2 + 30
-
+            
             frame = cv2.resize( frame, (w,h))
 
             img = frame[20:250, 20:250]
@@ -128,8 +137,20 @@ while run:
             res1 = res1.type(torch.FloatTensor)
 
             out = model(res1)
+            
+            frame = cv2.resize( frame, (w,h))
 
+            img = frame[20:250, 20:250]
 
+            res = cv2.resize(img, dsize=(28, 28), interpolation = cv2.INTER_CUBIC)
+            res = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
+
+            res1 = np.reshape(res, (1, 1, 28, 28)) / 255
+            res1 = torch.from_numpy(res1)
+            res1 = res1.type(torch.FloatTensor)
+
+            out = model(res1)
+            
             probs, label = torch.topk(out, 25)
             probs = torch.nn.functional.softmax(probs, 1)
 
@@ -139,8 +160,7 @@ while run:
                 output = 'Sign not detected'
             else:
                 output = signs[str(int(pred))] + ': ' + '{:.2f}'.format(float(probs[0,0])) + '%'
- 
-
+               
             full_sentence+=signs[str(int(pred))].lower()
 
             if(text_suggestion!=''):
@@ -155,48 +175,48 @@ while run:
                     full_sentence = ' '.join(full_sentence_list)
                     full_sentence+=' '
                     text_suggestion=''
+            return frame
+        return 0
+        
+def Webpage():
+    # --- Header section -- #
+    st.set_page_config(layout="wide")
+    st.title("Hi, Welcome to Cardano!")
+    # setup camera on streamlit
+    st.subheader("Camera Feed")
+    run = st.checkbox('Run')
+    FRAME_WINDOW = st.image([])
 
-            frame = cv2.putText(frame, output, (60,285), font, 1, (255,0,0), 2, cv2.LINE_AA)
-            cv2.putText(frame, FPS, (500,70), font, 1, (0, 255, 0), 2) #display FPS
-            # Annotate the video frame with the detection results.
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
-            cv2.rectangle(frame, (20,20), (250, 250), (0, 255, 0), 3)
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)  
+    #load model 
+    model_load()
 
+    camera = cv2.VideoCapture(0)
+    camera.set(3, 700)
+    camera.set(4, 480)
 
-    FRAME_WINDOW.image(frame)
+    while run:
+        has_frame, frame = camera.read()  
+
+        frame = detection(has_frame, frame)
+
+        frame = cv2.putText(frame, output, (60,285), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        cv2.putText(frame, FPS, (500,70), font, 1, (0, 255, 0), 2) #display FPS
+        # Annotate the video frame with the detection results.
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
+        cv2.rectangle(frame, (20,20), (250, 250), (0, 255, 0), 3)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)  
+
+        FRAME_WINDOW.image(frame)
     
-else:
-    st.write('Stop')
+    else:
+        st.write('Stop')
 
-st.subheader("Suggestion Feed")
-st.write(f"This will be our suggestion feed")
+    st.subheader("Suggestion Feed")
+    st.write(f"This will be our suggestion feed")
+    
+    translation()
 
 
-#integrate Google Cloud API
 
-trans = google_translator() 
-
-# pip install openpyxl
-df = pd.read_excel(os.path.join('language.xlsx'), sheet_name='wiki')
-df.dropna(inplace=True)
-lang = df['name'].to_list()
-langlist=tuple(lang)
-langcode = df['iso'].to_list()
-
-lang_array = {lang[i]: langcode[i] for i in range(len(langcode))}
-text = st.text_input('Sign Language Translation')
-#option = st.sidebar.radio('SELECT LANGUAGE', langlist)
-
-language = st.sidebar.selectbox('', ['en', 'pl', 'de', 'hr'])
-
-if st.button('Translate'):    
-        result = trans.translate(text, lang_tgt= language)
-        st.write(result)
-        speech = gTTS(text = result, lang = language, slow = False)
-        speech.save('user_trans.mp3')          
-        audio_file = open('user_trans.mp3', 'rb')    
-        audio_bytes = audio_file.read()    
-        st.audio(audio_bytes, format='audio/ogg',start_time=0)
 
 
