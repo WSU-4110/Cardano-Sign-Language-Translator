@@ -1,0 +1,10 @@
+opencv-contrib-python==4.5.5.62
+opencv-python==4.5.5.62
+numpy==1.22.2
+pandas==1.4.1
+openpyxl==3.0.9
+streamlit==1.5.1
+torch==1.10.2
+torchvision==0.11.3
+autocomplete==0.0.104
+google-trans-new==1.1.9
