@@ -1,0 +1,9 @@
+Model works locally however need to add the following:
+	
+	1. Import model to streamlit
+	2. Wrap stremlit with flask to record key presses as events if possible
+	3. Make sure to fix IndexOutOfBoundsError on option when option is selected
+	4. Model needs to run faster, possilby with threads?
+	5. Implement all language translation, not just hardcoded to one that it is now.
+	6. When using the files, need to add modelResent10.pth too big for github, find workaround
+
