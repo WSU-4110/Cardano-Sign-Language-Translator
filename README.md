@@ -22,7 +22,10 @@ Hosted on the Streamlit framework.
 
 ## Design - Screenshots:
 
-//add pics
+![278060231_570481434654106_4645321559362483949_n](https://user-images.githubusercontent.com/65133652/165195948-53ea474b-1c68-4b05-8172-8842b78db7da.png)
+![278135361_408915084003161_3914140703843243471_n](https://user-images.githubusercontent.com/65133652/165196003-55ed7924-ffa4-4e3c-bdfa-7f6bbed223e9.png)
+![274777769_677337986870020_7761917556052542863_n](https://user-images.githubusercontent.com/65133652/165196020-f792eaf7-2dac-4d13-8eb9-0936fc4e6f8c.png)
+
 
 
 ## Dataset
