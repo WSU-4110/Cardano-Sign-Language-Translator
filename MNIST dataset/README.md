@@ -1,5 +1,5 @@
 # SIGN LANGUAGE DATASET
-The Sign Language MNIST is presented here and follows the class and label format 
+The Sign Language MNIST is presented here and follows the class and label format. 
 
 The American Sign Language letter database of hand gestures represent a multi-class problem with 29 classes of letters. Each training and test case represents a label (0-25) as a one-to-one map for each alphabetic letter A-Z and cases (27-29) that represent nothing, delete, and space.
 
