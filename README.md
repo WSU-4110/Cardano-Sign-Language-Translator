@@ -30,7 +30,7 @@ Sign Language [MNIST](https://www.kaggle.com/datamunge/sign-language-mnist). Eac
 
 
 ## Contributors:
-- Ayon Chakroborty
-- Luka Cvetko
-- Patana Phongphila
+- Ayon Chakroborty - AI model development and training, optimization using GPU and CPU
+- Luka Cvetko - OpenCv integration, detection agorithm, word_suggestion algorithm, connected Streamlit UI + AI model + OpenCv algorithm
+- Patana Phongphila - UI design
 
