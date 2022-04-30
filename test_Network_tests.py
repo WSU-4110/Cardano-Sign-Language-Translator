@@ -33,12 +33,12 @@ class TestNetwork(unittest.TestCase):
         self.assertEqual(expected, hit)
 
 
-    def test_epoch_end(self):
+    def test_epoch_end2(self):
         expected = "d"
         hit = epoch_end()
         self.assertEqual(expected, hit)
 
-    def test_training_step(self):
+    def test_training_step2(self):
         expected = "e"
         hit = training_step()
         self.assertEqual(expected, hit)
