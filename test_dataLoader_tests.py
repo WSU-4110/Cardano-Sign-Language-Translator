@@ -21,4 +21,9 @@ class TestDeviceDataLoader(unittest.TestCase):
         expectedResult = "g"
         hit = show_DataLoader()
         self.assertEqual(expectedResult, hit)
+        
+if __name__ == '__main__':
+
+    
+    unittest.main()
 
