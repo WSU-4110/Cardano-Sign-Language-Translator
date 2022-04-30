@@ -10,7 +10,6 @@ import threading
 import argparse
 import imutils
 import streamlit as st
-from gtts import gTTS
 import unittest
 
 
