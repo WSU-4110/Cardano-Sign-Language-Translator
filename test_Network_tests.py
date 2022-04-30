@@ -43,7 +43,7 @@ class TestNetwork(unittest.TestCase):
         hit = training_step()
         self.assertEqual(expected, hit)
         
-  if __name__ == '__main__':
+if __name__ == '__main__':
 
     
     unittest.main() 
