@@ -24,7 +24,7 @@ import unittest
 def translation():
     sentence = "hello"
     convert = "de"
-    return "hallo"
+    return "hallo "
 
 
 
@@ -118,7 +118,7 @@ def detection():
 
         #frame = cv2.resize( frame, (width,height))
 
-        frame = img[20:250, 20:250]
+        #frame = img[20:250, 20:250]
 
         #img = Image.fromarray(img)
 
