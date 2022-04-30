@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220429234942" tests="7" file="camera_tests.py" time="2.275" timestamp="2022-04-29T23:49:47" failures="1" errors="0" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="2.074" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="0.003" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="0.002" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="0.180" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="0.003" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="0.003" timestamp="2022-04-29T23:49:47"/>
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="0.010" timestamp="2022-04-29T23:49:47">
+		<failure type="AssertionError" message="'d' != 'c'
+- d
++ c
+"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 37, in test_epoch_end
+    self.assertEqual(expected, hit)
+  File "/usr/lib/python3.9/unittest/case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.9/unittest/case.py", line 1211, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.9/unittest/case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: 'd' != 'c'
+- d
++ c
+
+]]></failure>
+	</testcase>
+</testsuite>

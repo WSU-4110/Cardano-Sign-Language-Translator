@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220429234611" tests="7" file="camera_tests.py" time="11.694" timestamp="2022-04-29T23:46:25" failures="0" errors="3" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="3.486" timestamp="2022-04-29T23:46:17"/>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="1.487" timestamp="2022-04-29T23:46:20"/>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="1.307" timestamp="2022-04-29T23:46:21"/>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="1.409" timestamp="2022-04-29T23:46:23"/>
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="1.374" timestamp="2022-04-29T23:46:18">
+		<error type="NameError" message="name 'validation_epoch_end' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 39, in test_epoch_end
+    hit = validation_epoch_end()
+NameError: name 'validation_epoch_end' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="1.324" timestamp="2022-04-29T23:46:24">
+		<error type="NameError" message="name 'validation_epoch_end' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 33, in test_validation_epoch_end
+    hit =validation_epoch_end()
+NameError: name 'validation_epoch_end' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="1.308" timestamp="2022-04-29T23:46:25">
+		<error type="NameError" message="name 'validation_step' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 23, in test_validation_step
+    hit =validation_step()
+NameError: name 'validation_step' is not defined
+]]></error>
+	</testcase>
+</testsuite>

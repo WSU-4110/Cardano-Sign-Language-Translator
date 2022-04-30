@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.loader._FailedTest-20220429161704" tests="1" file="unittest/loader.py" time="0.003" timestamp="2022-04-29T16:17:07" failures="0" errors="1" skipped="0">
+	<testcase classname="unittest.loader._FailedTest" name="camera_tests" time="0.003" timestamp="2022-04-29T16:17:07">
+		<error type="ImportError" message="Failed to import test module: camera_tests
+Traceback (most recent call last):
+  File &quot;/usr/lib/python3.9/unittest/loader.py&quot;, line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py&quot;, line 15, in &lt;module&gt;
+    from Assignment_6 import c1
+ModuleNotFoundError: No module named 'Assignment_6'
+"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/usr/lib/python3.9/unittest/loader.py", line 34, in testFailure
+    raise self._exception
+ImportError: Failed to import test module: camera_tests
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 15, in <module>
+    from Assignment_6 import c1
+ModuleNotFoundError: No module named 'Assignment_6'
+
+]]></error>
+	</testcase>
+</testsuite>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220429164348" tests="7" file="camera_tests.py" time="9.456" timestamp="2022-04-29T16:44:00" failures="0" errors="4" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="1.348" timestamp="2022-04-29T16:43:53"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="1.371" timestamp="2022-04-29T16:43:59"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="1.312" timestamp="2022-04-29T16:44:00"/>
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="1.484" timestamp="2022-04-29T16:43:52">
+		<error type="AttributeError" message="'TestCamera' object has no attribute 'detection'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 12, in test_camera
+    hit = self.detection()
+AttributeError: 'TestCamera' object has no attribute 'detection'
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="1.312" timestamp="2022-04-29T16:43:55">
+		<error type="AttributeError" message="'TestCamera' object has no attribute 'get_suggestion'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 31, in test_get_suggestion
+    self.assertEqual(expected, self.get_suggestion())
+AttributeError: 'TestCamera' object has no attribute 'get_suggestion'
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="1.313" timestamp="2022-04-29T16:43:56">
+		<error type="AttributeError" message="'TestCamera' object has no attribute 'predict_image'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 41, in test_predict_image
+    hit = self.predict_image()
+AttributeError: 'TestCamera' object has no attribute 'predict_image'
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="1.316" timestamp="2022-04-29T16:43:57">
+		<error type="AttributeError" message="'TestCamera' object has no attribute 'translation'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 18, in test_translation
+    hit = self.translation()
+AttributeError: 'TestCamera' object has no attribute 'translation'
+]]></error>
+	</testcase>
+</testsuite>

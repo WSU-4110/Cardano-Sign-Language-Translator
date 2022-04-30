@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220430000129" tests="7" file="camera_tests.py" time="2.402" timestamp="2022-04-30T00:01:34" failures="0" errors="0" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="2.009" timestamp="2022-04-30T00:01:33"/>
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="0.001" timestamp="2022-04-30T00:01:33"/>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="0.001" timestamp="2022-04-30T00:01:33"/>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="0.001" timestamp="2022-04-30T00:01:33"/>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="0.388" timestamp="2022-04-30T00:01:34"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="0.001" timestamp="2022-04-30T00:01:34"/>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="0.001" timestamp="2022-04-30T00:01:34"/>
+</testsuite>

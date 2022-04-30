@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220429232254" tests="7" file="camera_tests.py" time="11.547" timestamp="2022-04-29T23:23:08" failures="0" errors="4" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="3.479" timestamp="2022-04-29T23:23:00"/>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="1.298" timestamp="2022-04-29T23:23:04"/>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="1.409" timestamp="2022-04-29T23:23:05"/>
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="1.368" timestamp="2022-04-29T23:23:01">
+		<error type="NameError" message="name 'validation_epoch_end' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/camera_tests.py", line 40, in test_epoch_end
+    hit = validation_epoch_end()
+NameError: name 'validation_epoch_end' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="1.367" timestamp="2022-04-29T23:23:02">
+		<error type="TypeError" message="test_get_suggestion() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_get_suggestion() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="1.321" timestamp="2022-04-29T23:23:07">
+		<error type="TypeError" message="test_validation_epoch_end() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_validation_epoch_end() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="1.305" timestamp="2022-04-29T23:23:08">
+		<error type="TypeError" message="test_validation_step() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_validation_step() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+</testsuite>

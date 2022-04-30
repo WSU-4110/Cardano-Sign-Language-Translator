@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Network_tests.TestNetwork-20220429232111" tests="3" file="Network_tests.py" time="0.007" timestamp="2022-04-29T23:21:25" failures="0" errors="3" skipped="0">
+	<testcase classname="Network_tests.TestNetwork" name="test_epoch_end" time="0.003" timestamp="2022-04-29T23:21:25">
+		<error type="NameError" message="name 'to_device' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 589, in run
+    self._callSetUp()
+  File "/usr/lib/python3.9/unittest/case.py", line 547, in _callSetUp
+    self.setUp()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 26, in setUp
+    self.model = to_device(ResNet152(), self.device)
+NameError: name 'to_device' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_epoch_end" time="0.002" timestamp="2022-04-29T23:21:25">
+		<error type="NameError" message="name 'to_device' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 589, in run
+    self._callSetUp()
+  File "/usr/lib/python3.9/unittest/case.py", line 547, in _callSetUp
+    self.setUp()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 26, in setUp
+    self.model = to_device(ResNet152(), self.device)
+NameError: name 'to_device' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_step" time="0.002" timestamp="2022-04-29T23:21:25">
+		<error type="NameError" message="name 'to_device' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 589, in run
+    self._callSetUp()
+  File "/usr/lib/python3.9/unittest/case.py", line 547, in _callSetUp
+    self.setUp()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 26, in setUp
+    self.model = to_device(ResNet152(), self.device)
+NameError: name 'to_device' is not defined
+]]></error>
+	</testcase>
+</testsuite>

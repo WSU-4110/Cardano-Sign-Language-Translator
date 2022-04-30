@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Network_tests.TestNetwork-20220429235545" tests="3" file="Network_tests.py" time="0.007" timestamp="2022-04-29T23:55:50" failures="0" errors="3" skipped="0">
+	<testcase classname="Network_tests.TestNetwork" name="test_epoch_end" time="0.004" timestamp="2022-04-29T23:55:50">
+		<error type="TypeError" message="epoch_end() missing 1 required positional argument: 'self'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 38, in test_epoch_end
+    hit = epoch_end()
+TypeError: epoch_end() missing 1 required positional argument: 'self'
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_epoch_end" time="0.002" timestamp="2022-04-29T23:55:50">
+		<error type="TypeError" message="validation_epoch_end() missing 1 required positional argument: 'self'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 32, in test_validation_epoch_end
+    hit = validation_epoch_end()
+TypeError: validation_epoch_end() missing 1 required positional argument: 'self'
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_step" time="0.002" timestamp="2022-04-29T23:55:50">
+		<error type="TypeError" message="validation_step() missing 1 required positional argument: 'self'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 27, in test_validation_step
+    hit = validation_step()
+TypeError: validation_step() missing 1 required positional argument: 'self'
+]]></error>
+	</testcase>
+</testsuite>

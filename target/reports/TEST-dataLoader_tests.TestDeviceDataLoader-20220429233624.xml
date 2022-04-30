@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dataLoader_tests.TestDeviceDataLoader-20220429233624" tests="2" file="dataLoader_tests.py" time="0.002" timestamp="2022-04-29T23:36:39" failures="0" errors="0" skipped="0">
+	<testcase classname="dataLoader_tests.TestDeviceDataLoader" name="test_show_data_loader" time="0.001" timestamp="2022-04-29T23:36:39"/>
+	<testcase classname="dataLoader_tests.TestDeviceDataLoader" name="test_show_device" time="0.001" timestamp="2022-04-29T23:36:39"/>
+</testsuite>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camera_tests.TestCamera-20220429233706" tests="7" file="camera_tests.py" time="11.639" timestamp="2022-04-29T23:37:20" failures="0" errors="5" skipped="0">
+	<testcase classname="camera_tests.TestCamera" name="test_camera" time="3.548" timestamp="2022-04-29T23:37:12"/>
+	<testcase classname="camera_tests.TestCamera" name="test_translation" time="1.419" timestamp="2022-04-29T23:37:18"/>
+	<testcase classname="camera_tests.TestCamera" name="test_epoch_end" time="1.369" timestamp="2022-04-29T23:37:14">
+		<error type="TypeError" message="test_epoch_end() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_epoch_end() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_get_suggestion" time="1.369" timestamp="2022-04-29T23:37:15">
+		<error type="TypeError" message="test_get_suggestion() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_get_suggestion() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_predict_image" time="1.308" timestamp="2022-04-29T23:37:16">
+		<error type="TypeError" message="test_predict_image() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_predict_image() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_epoch_end" time="1.323" timestamp="2022-04-29T23:37:19">
+		<error type="TypeError" message="test_validation_epoch_end() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_validation_epoch_end() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+	<testcase classname="camera_tests.TestCamera" name="test_validation_step" time="1.303" timestamp="2022-04-29T23:37:20">
+		<error type="TypeError" message="test_validation_step() takes 0 positional arguments but 1 was given"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+TypeError: test_validation_step() takes 0 positional arguments but 1 was given
+]]></error>
+	</testcase>
+</testsuite>

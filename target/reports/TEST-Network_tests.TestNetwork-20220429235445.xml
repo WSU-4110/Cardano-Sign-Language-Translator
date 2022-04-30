@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Network_tests.TestNetwork-20220429235445" tests="3" file="Network_tests.py" time="0.008" timestamp="2022-04-29T23:54:50" failures="0" errors="3" skipped="0">
+	<testcase classname="Network_tests.TestNetwork" name="test_epoch_end" time="0.003" timestamp="2022-04-29T23:54:50">
+		<error type="NameError" message="name 'epoch_end' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 37, in test_epoch_end
+    hit = epoch_end()
+NameError: name 'epoch_end' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_epoch_end" time="0.002" timestamp="2022-04-29T23:54:50">
+		<error type="NameError" message="name 'validation_epoch_end' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 31, in test_validation_epoch_end
+    hit = validation_epoch_end()
+NameError: name 'validation_epoch_end' is not defined
+]]></error>
+	</testcase>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_step" time="0.002" timestamp="2022-04-29T23:54:50">
+		<error type="NameError" message="name 'validation_step' is not defined"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 26, in test_validation_step
+    hit = validation_step()
+NameError: name 'validation_step' is not defined
+]]></error>
+	</testcase>
+</testsuite>

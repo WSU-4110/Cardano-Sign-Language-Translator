@@ -1,0 +1,38 @@
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+running sdist
+running egg_info
+creating Assignment_6.egg-info
+writing Assignment_6.egg-info/PKG-INFO
+writing dependency_links to Assignment_6.egg-info/dependency_links.txt
+writing namespace_packages to Assignment_6.egg-info/namespace_packages.txt
+writing top-level names to Assignment_6.egg-info/top_level.txt
+writing manifest file 'Assignment_6.egg-info/SOURCES.txt'
+reading manifest file 'Assignment_6.egg-info/SOURCES.txt'
+writing manifest file 'Assignment_6.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+warning: check: missing required meta-data: url
+
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) should be supplied
+
+creating Assignment_6-1.0.dev0
+creating Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying files to Assignment_6-1.0.dev0...
+copying AI.py -> Assignment_6-1.0.dev0
+copying c1.py -> Assignment_6-1.0.dev0
+copying cardanoresnet1.py -> Assignment_6-1.0.dev0
+copying setup.py -> Assignment_6-1.0.dev0
+copying Assignment_6.egg-info/PKG-INFO -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying Assignment_6.egg-info/SOURCES.txt -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying Assignment_6.egg-info/dependency_links.txt -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying Assignment_6.egg-info/namespace_packages.txt -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying Assignment_6.egg-info/top_level.txt -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+copying Assignment_6.egg-info/zip-safe -> Assignment_6-1.0.dev0/Assignment_6.egg-info
+Writing Assignment_6-1.0.dev0/setup.cfg
+creating dist
+Creating tar archive
+removing 'Assignment_6-1.0.dev0' (and everything under it)

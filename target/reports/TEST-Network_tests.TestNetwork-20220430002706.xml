@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Network_tests.TestNetwork-20220430002706" tests="4" file="Network_tests.py" time="0.005" timestamp="2022-04-30T00:27:12" failures="0" errors="0" skipped="0">
+	<testcase classname="Network_tests.TestNetwork" name="test_epoch_end" time="0.002" timestamp="2022-04-30T00:27:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_training_step" time="0.001" timestamp="2022-04-30T00:27:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_epoch_end" time="0.001" timestamp="2022-04-30T00:27:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_step" time="0.001" timestamp="2022-04-30T00:27:12"/>
+</testsuite>

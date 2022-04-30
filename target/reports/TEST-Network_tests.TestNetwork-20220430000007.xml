@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Network_tests.TestNetwork-20220430000007" tests="4" file="Network_tests.py" time="0.006" timestamp="2022-04-30T00:00:12" failures="0" errors="1" skipped="0">
+	<testcase classname="Network_tests.TestNetwork" name="test_epoch_end" time="0.001" timestamp="2022-04-30T00:00:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_epoch_end" time="0.001" timestamp="2022-04-30T00:00:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_validation_step" time="0.001" timestamp="2022-04-30T00:00:12"/>
+	<testcase classname="Network_tests.TestNetwork" name="test_training_step" time="0.003" timestamp="2022-04-30T00:00:12">
+		<error type="TypeError" message="training_step() missing 1 required positional argument: 'self'"><![CDATA[Traceback (most recent call last):
+  File "/usr/lib/python3.9/unittest/case.py", line 59, in testPartExecutor
+    yield
+  File "/usr/lib/python3.9/unittest/case.py", line 593, in run
+    self._callTestMethod(testMethod)
+  File "/usr/lib/python3.9/unittest/case.py", line 550, in _callTestMethod
+    method()
+  File "/home/luka/Desktop/Assignment_6/src/unittest/python/Network_tests.py", line 43, in test_training_step
+    hit = training_step()
+TypeError: training_step() missing 1 required positional argument: 'self'
+]]></error>
+	</testcase>
+</testsuite>
