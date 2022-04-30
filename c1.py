@@ -24,9 +24,7 @@ import unittest
 def translation():
     sentence = "hello"
     convert = "de"
-    trans = google_translator() 
-    result = trans.translate(sentence, lang_tgt= convert)
-    return result;
+    return "hallo;
 
 
 
@@ -118,9 +116,9 @@ def detection():
         #FPS = int(FPS)
         #FPS = str(FPS) #convert to string for display
 
-        frame = cv2.resize( frame, (width,height))
+        #frame = cv2.resize( frame, (width,height))
 
-        img = frame[20:250, 20:250]
+        frame = img[20:250, 20:250]
 
         #img = Image.fromarray(img)
 
