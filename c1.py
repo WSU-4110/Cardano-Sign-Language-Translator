@@ -24,7 +24,7 @@ import unittest
 def translation():
     sentence = "hello"
     convert = "de"
-    return "hallo;
+    return "hallo"
 
 
 
