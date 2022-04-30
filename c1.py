@@ -93,15 +93,15 @@ def detection():
 
 
     #device = torch.device('cpu')
-    video_cap = cv2.VideoCapture(0)
+    #video_cap = cv2.VideoCapture(0)
 
-    video_cap.set(3, 700)
-    video_cap.set(4, 480)
+    #video_cap.set(3, 700)
+    #video_cap.set(4, 480)
 
 
     while True:
         key = cv2.waitKey(2)
-        has_frame, frame = video_cap.read()
+     
 
         width = 700
         height = 480
@@ -151,16 +151,16 @@ def detection():
 
       
                           
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        frame = cv2.putText(frame, output, (60,285), font, 1, (255,0,0), 2, cv2.LINE_AA)
-        cv2.rectangle(frame, (20,20), (250, 250), (0, 255, 0), 3)
-        cv2.namedWindow(win_name)        # Create a named window
+        #font = cv2.FONT_HERSHEY_SIMPLEX
+        #frame = cv2.putText(frame, output, (60,285), font, 1, (255,0,0), 2, cv2.LINE_AA)
+        #cv2.rectangle(frame, (20,20), (250, 250), (0, 255, 0), 3)
+        #cv2.namedWindow(win_name)        # Create a named window
 
-        cv2.moveWindow(win_name, 1000,200)
+        #cv2.moveWindow(win_name, 1000,200)
         
         #cv2.imshow(win_name, frame)            
         #if key == ord('Q') or key == ord('q') or key == 27:
-        cv2.destroyAllWindows()
+        #cv2.destroyAllWindows()
         break
     return True
 
