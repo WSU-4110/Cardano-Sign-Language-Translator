@@ -4,7 +4,7 @@ from mtranslate import translate
 import pandas as pd
 import os
 import sqlite3
-
+from PIL import Image
 # Database
 conn = sqlite3.connect('data.db')
 c = conn.cursor()
@@ -27,47 +27,30 @@ def view_all_users():
 
 st.set_page_config(layout="wide")
 st.title("Hi, Welcome to Cardano!")
-
 # --- Header section -- #
 menu = ("Home","Login","Signup")
 choice = st.sidebar.selectbox("Menu",menu)
 if choice == "Home":
-    st.subheader("About Cardano")
+    st.subheader("About Cardano...")
+    st.write(' In America, less than 1% of the population knows sign language. '
+             ' Through Cardano we hoped to remove the communication between the hearing '
+             ' and Non-Hearing individuals. By combining a Pytorch Deep learning module ' 
+             ' and OpenCV image processing, we are able to create a neural network model for pose recognition. '
+             ' Overall, we hope that through our application deaf or mute people are able to communicate '
+             ' more easily.')
+    image2 = Image.open('ex.jpg')
+    image = Image.open('sign.jpg')
+    st.image(image2)
+    st.image(image)
 elif choice == "Login":
+
     username = st.sidebar.text_input("UserName")
     password = st.sidebar.text_input("Password", type='password')
-    if st.sidebar.button("Login"):
+    if st.sidebar.checkbox("Login"):
         create_usertable()
         result = login_user(username,password)
         if result:
             st.success("Logged in as {}".format(username))
-            st.subheader("Camera Feed")
-            run = st.checkbox('Run')
-            FRAME_WINDOW = st.image([])
-            camera = cv2.VideoCapture(0)
-            while run:
-                _, frame = camera.read()
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                FRAME_WINDOW.image(frame)
-            else:
-                st.write('Stop')
-
-            # pip install openpyxl
-            df = pd.read_excel(os.path.join('language.xlsx'), sheet_name='wiki')
-            df.dropna(inplace=True)
-            lang = df['name'].to_list()
-            langlist = tuple(lang)
-            langcode = df['iso'].to_list()
-
-            lang_array = {lang[i]: langcode[i] for i in range(len(langcode))}
-            input_text = st.text_area("Sign Language Translation", height=200)
-            option = st.sidebar.radio('SELECT LANGUAGE', langlist)
-            if len(input_text) > 0:
-                try:
-                    output = translate(input_text, lang_array[option])
-                    st.text_area("Translated Text", output, height=200)
-                except Exception as e:
-                    st.error(e)
 
         else:
             st.warning("Incorrect Username/Password")
@@ -79,12 +62,8 @@ elif choice == "Signup":
     new_password = st.sidebar.text_input("Password", type='password')
 
     if st.sidebar.button("Signup"):
+
         create_usertable()
         add_userdata(new_user, new_password)
         st.success("You have successfully created a Valid Account")
         st.info("Go to Login menu to login")
-
-
-
-
-
