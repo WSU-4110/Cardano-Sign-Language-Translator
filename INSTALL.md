@@ -1,4 +1,6 @@
-- Install all the requirments, using pip install.
+# Installation Guide
+
+- Install all the requirments, using pip install, found in **requirements.txt**
 - Change the source code of one packge 
   - google_trans_new -> change file /usr/local/lib/python3.9/site-packages/google_trans_new/google_trans_new.py
     
