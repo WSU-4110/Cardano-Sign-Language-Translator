@@ -8,3 +8,7 @@ torch==1.10.2
 torchvision==0.11.3
 autocomplete==0.0.104
 google-trans-new==1.1.9
+matplotlib
+sqlite3
+gtts
+
