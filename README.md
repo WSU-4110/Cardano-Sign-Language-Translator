@@ -31,7 +31,8 @@ Hosted on the Streamlit framework.
 
 ## **Video showing demo of the application**:
 
-https://user-images.githubusercontent.com/65133652/165197453-eeb938f7-e89a-471d-a7e1-eaba8edc5a60.mp4
+[https://user-images.githubusercontent.com/65133652/165197453-eeb938f7-e89a-471d-a7e1-eaba8edc5a60.mp4](https://user-images.githubusercontent.com/76793940/174337949-59728708-2611-4ed5-83f4-08c481c54b6f.mp4
+)
 
 ## Dataset:
 Sign Language [MNIST](https://www.kaggle.com/datamunge/sign-language-mnist). Each letter is represented by an index 0-25 which corresponds to the letter in the alphabet A-Z
