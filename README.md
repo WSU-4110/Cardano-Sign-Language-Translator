@@ -38,7 +38,7 @@ Sign Language [MNIST](https://www.kaggle.com/datamunge/sign-language-mnist). Eac
 
 
 ## Contributors:
-- Ayon Chakroborty 
+- Ayon Chakroborty (Team Lead)
   - AI model development and training, optimization using GPU and CPU, connected database with Streamlit
 - Luka Cvetko
   - OpenCv integration, detection algorithm, word_suggestion algorithm, connected Streamlit UI + AI model + OpenCv algorithm
